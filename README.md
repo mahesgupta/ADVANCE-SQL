@@ -33,13 +33,13 @@
 ###   Solution:-
 
 
-SELECT F.title, C.name, F.length
-FROM film  F INNER JOIN film_category FC
-ON F.film_id=FC.film_id
-INNER JOIN CATEGORY C
-ON C.category_id=FC.category_id
-WHERE C.name='Sports' or C.name='Drama'
-ORDER BY F.length;
+SELECT F.title, C.name, F.length  
+FROM film  F INNER JOIN film_category FC  
+ON F.film_id=FC.film_id  
+INNER JOIN CATEGORY C  
+ON C.category_id=FC.category_id  
+WHERE C.name='Sports' or C.name='Drama'  
+ORDER BY F.length;  
 
 
 
