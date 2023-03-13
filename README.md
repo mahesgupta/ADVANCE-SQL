@@ -165,12 +165,12 @@ ORDER BY F.length DESC;
 ###         "DOGMA FAMILY" "Animation" 178.7
 ###         "BACKLASH UNDEFEATED" "Children" 158.81
 ###          Solution:-
-                    select * from film;
-                    select N.title,N.CATEG_NAME,N.total_collection 
+                    
+                    SELECT N.title,N.CATEG_NAME,N.total_collection 
                     from
                     (SELECT M.title,M.CATEG_NAME,M.total_collection, MAX(total_collection) OVER(PARTITION BY M.CATEG_NAME) MAXIMUM_OVER_CATEG
                     FROM
-                    (select  F.title ,C.name AS CATEG_NAME ,sum(P.amount) AS total_collection
+                    (SELECT  F.title ,C.name AS CATEG_NAME ,sum(P.amount) AS total_collection
                     from film F, inventory I , rental R, payment P, film_category FC, category C
                     where F.film_id=I.film_id 
                     AND I.inventory_id=R.inventory_id 
