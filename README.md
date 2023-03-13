@@ -73,7 +73,7 @@ ORDER BY F.length;
 ###       eg. "Poland, Bydgoszcz" 52.88
 ###       Solution:-  
                   
-               SELECT CO.country, CI.city , SUM(P.amount)
+               SELECT  concat(CO.country,'    ' ,CI.city  ) AS country_city ,SUM(P.amount)
                FROM country CO,city CI ,address A,customer C ,payment P
                WHERE CO.country_id=CI.country_id AND CI.city_id=A.city_id AND A.address_id=C.address_id AND C.customer_id=P.customer_id
                GROUP BY CO.country,CI.city
