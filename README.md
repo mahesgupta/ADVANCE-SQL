@@ -39,7 +39,7 @@ ON F.film_id=FC.film_id
 INNER JOIN CATEGORY C  
 ON C.category_id=FC.category_id  
 WHERE C.name='Sports' or C.name='Drama'  
-ORDER BY F.length;  
+ORDER BY F.length DESC;   
 
 
 
