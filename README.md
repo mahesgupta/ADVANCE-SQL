@@ -10,7 +10,7 @@
 ###               high: 25.00 - 29.99
 ###               Solution:-  
                            SELECT SUM(CASE WHEN replacement_cost BETWEEN 9.99 AND 19.99 THEN 1 ELSE 0 END) AS low,  
-                           SUM(CASE WHEN replacement_cost BETWEEN 20.00 AND 24.99 THEN 1 ELSE 0 END) AS midium,  
+                           SUM(CASE WHEN replacement_cost BETWEEN 20.00 AND 24.99 THEN 1 ELSE 0 END) AS medium,  
                            SUM(CASE WHEN replacement_cost BETWEEN 25.00 AND 29.99 THEN 1 ELSE 0 END) AS high  
                            FROM film; 
 ###      Approach:-
@@ -145,7 +145,7 @@ ORDER BY F.length;
                    FROM
                    (SELECT A.district,C.customer_id ,SUM(P.amount) AS total_payment_per_customer
                    FROM address A , customer C , payment P
-                   where A.address_id=C.Address_id AND C.customer_id=P.customer_id
+                   where A.address_id=C.address_id AND C.customer_id=P.customer_id
                    GROUP BY A.district,C.customer_id
                     ) B
                    GROUP BY B.district;
