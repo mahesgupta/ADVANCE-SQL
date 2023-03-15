@@ -85,7 +85,7 @@ ORDER BY F.length DESC;
 2. So for getting the desired result I have joined 4 tables i.e., country, city, address and payment to fetch country name, city name which I am concatenating using CONCAT() function.  
 3. Also calculated the revenue by using window function which is calculating the sum of amount partitioning by Country,City and then ordering revenue by descending order .  
 
-<img width="625" alt="Screenshot 2023-03-08 at 12 36 20 AM" src="https://user-images.githubusercontent.com/122514232/223525912-90a329f4-499e-403c-b23e-dcc114e2f654.png">
+<img width="1005" alt="Screenshot 2023-03-15 at 8 53 07 AM" src="https://user-images.githubusercontent.com/122514232/225198083-c7781346-ba7e-4d08-8067-61bf8bd8a4e9.png">
 
 
 
